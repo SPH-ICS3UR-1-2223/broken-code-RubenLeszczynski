@@ -12,54 +12,54 @@ public class FixMe {
 		Scanner in = new Scanner(System.in);
 //Read in a number
 		int lines = in.nextInt();
-		int j;
 		in.nextLine();
-		String output = ("");
+		String output = "";
 		// Loop through the lines
 		for (int i = 0; i < lines; i++) {
 			// Read in a string
-			String input = in.next();
+			String input = in.nextLine();
 			// Loop through the characters
-		}
-		char currentChar = ('a');
-		char currentCount = '0';
-		char previousChar;
-		for (j = 0; j < string.length(); j++) {
-			// if this is the first pass through the loop
-			if (j == 0) {
-				// current char is the char at j
-				currentChar = input.charAt(j);
-				// current count = 1
-				currentCount = 2;
-			}
-			// else
-			else {
-				// set previousChar to currentChar
-				previousChar = (currentChar)
-				// current character = charAt(i)
-				currentChar == Input.charAt(j);
-				// if the current and previous char are the same
-				if (currentChar = previousChar) {
-					// increase the count
-					currentCount++;
+			char currentChar = 'a';
+			char currentCount = '0';
+			char previousChar= '0';
+			for (int j = 0; j < input.length(); j++) {
+				// if this is the first pass through the loop
+				if (j == 0) {
+					// current char is the char at j
+					currentChar = input.charAt(j);
+					// current count = 1
+					currentCount = 1;
 				}
 				// else
 				else {
-					// print current count + " " + previousChar
-					output += currentCount + " " + previousChar + " ";
-					// currentCount = 1
-					currentCount = 1;
-				}
-				// If we're on the last character
-				if (j == input.length() - 1) {
-					// add the count to the output
-					output += currentCount + " " + currentChar + " ";
+					// set previousChar to currentChar
+					previousChar = currentChar;
+					// current character = charAt(i)
+					currentChar = input.charAt(i);
+					// if the current and previous char are the same
+					if (currentChar == previousChar) {
+						// increase the count
+						currentCount++;
+					}
+					// else
+					else {
+						// print current count + " " + previousChar
+//						System.out.print(currentCount + " " + previousChar);
+						output += currentCount + " " + previousChar + " ";
+						// currentCount = 1
+						currentCount = 1;
+					}
+					// If we're on the last character
+					if (j == input.length() - 1) {
+						// add the count to the input
+						output += currentCount + " " + currentChar + " ";
+					}
+
 				}
 
+				// Print newline
+				input += "\n";
 			}
-
-			// Print newline
-			output += "\n";
 		}
 // Print the result
 		System.out.println(output);
