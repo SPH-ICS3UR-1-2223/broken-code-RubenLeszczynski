@@ -20,8 +20,8 @@ public class FixMe {
 			String input = in.nextLine();
 			// Loop through the characters
 			char currentChar = 'a';
-			char currentCount = '0';
-			char previousChar= '0';
+			int currentCount = 0;
+			char previousChar;
 			for (int j = 0; j < input.length(); j++) {
 				// if this is the first pass through the loop
 				if (j == 0) {
@@ -34,8 +34,8 @@ public class FixMe {
 				else {
 					// set previousChar to currentChar
 					previousChar = currentChar;
-					// current character = charAt(i)
-					currentChar = input.charAt(i);
+					// current character = charAt(j)
+					currentChar = input.charAt(j);
 					// if the current and previous char are the same
 					if (currentChar == previousChar) {
 						// increase the count
@@ -49,18 +49,19 @@ public class FixMe {
 						// currentCount = 1
 						currentCount = 1;
 					}
+				}
 					// If we're on the last character
 					if (j == input.length() - 1) {
 						// add the count to the input
 						output += currentCount + " " + currentChar + " ";
 					}
-
+					
 				}
 
 				// Print newline
 				input += "\n";
 			}
-		}
+		
 // Print the result
 		System.out.println(output);
 		in.close();
